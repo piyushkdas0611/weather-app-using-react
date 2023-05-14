@@ -1,0 +1,34 @@
+.displayWeather {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+}
+.main-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 40px black;
+    border-radius: 25px;
+    color: white;
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(7px);
+    transition: all 1s;
+    margin-right: 4rem;
+}
+.main-card h1{
+    text-transform: capitalize;
+}
+
+@media (max-width: 485px) {
+    .displayWeather {
+        margin: 0;
+    }
+    main-card {
+        margin: 0;
+        padding: 2rem;
+    }
+}
