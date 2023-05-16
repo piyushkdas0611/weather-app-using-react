@@ -30,7 +30,7 @@ function Weather() {
 
   const handlechange = (e) => {
     let name = e.target.name;
-    let value = e.target.value;
+    let value = e.target.value.trim();
 
     if (name === "city") {
       setForm({ ...form, city: value });
