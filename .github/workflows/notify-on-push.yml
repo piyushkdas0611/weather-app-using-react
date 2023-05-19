@@ -15,4 +15,5 @@ jobs:
         uses: appleboy/telegram-action@v0.1.0
         with:
           to: ${{ secrets.TELEGRAM_USER_ID }}  # Replace with your Telegram user ID
+          token: ${{ secrets.TELEGRAM_TOKEN }}
           message: "Changes pushed to repository: ${{ github.repository }}"
