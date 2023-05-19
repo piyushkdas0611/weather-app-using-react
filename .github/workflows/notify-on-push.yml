@@ -1,0 +1,18 @@
+name: Notify on Push
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name
+
+jobs:
+  send_notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Send notification
+        uses: appleboy/telegram-action@v0.1.0
+        with:
+          to: ${{ secrets.TELEGRAM_USER_ID }}  # Replace with your Telegram user ID
+          message: "Changes pushed to repository: ${{ github.repository }}"
